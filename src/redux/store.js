@@ -1,23 +1,25 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { userSlice } from "./features/auth/userSlice";
 import { modalSlice } from "./shared/modalSlice";
-import { registroSlice } from "./features/auth/registroSlice";
+import { registerSlice } from "./features/auth/registerSlice";
 import { slideshowSlice } from "./shared/slideshowSlice";
-import { subastaSlice } from "./features/auction/subastaSlice";
+import { auctionSlice } from "./features/auction/auctionSlice";
 import { loaderSlice } from "./shared/loaderSlice";
-import { busquedaSlice } from "./features/search/busquedaSlice";
-import { vendedorSlice } from "./features/sell/venderSlide";
+import { searchSlice } from "./features/search/searchSlice";
+import { sellSlice } from "./features/sell/sellSlice";
+import { homeSlice } from "./features/home/homeSlice";
 
 
 export const store = configureStore({
     reducer: {
       userReducer: userSlice.reducer,
       modalReducer: modalSlice.reducer,
-      registroReducer: registroSlice.reducer,
+      registerReducer: registerSlice.reducer,
       slideshowReducer: slideshowSlice.reducer,
-      subastaReducer: subastaSlice.reducer,
-      busquedaReducer: busquedaSlice.reducer,
-      vendedorReducer:vendedorSlice.reducer,
+      auctionReducer: auctionSlice.reducer,
+      searchReducer: searchSlice.reducer,
+      sellReducer: sellSlice.reducer,
+      homeReducer: homeSlice.reducer,
       loaderReducer:loaderSlice.reducer
     },
   });

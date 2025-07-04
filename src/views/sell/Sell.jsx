@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Breadcrumb from '../../components/ui/Breadcrumb';
 
-const Vender = () => {
+const Sell = () => {
   const [formData, setFormData] = useState({
     nombre: '',
     marca: '',
@@ -360,4 +360,4 @@ const Vender = () => {
   );
 };
 
-export default Vender;
+export default Sell;

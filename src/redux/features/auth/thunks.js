@@ -1,6 +1,6 @@
 import { fetch, fetchSinToken } from "../../../api/api";
 import { _URL_DEV } from "../../../const/url";
-import { setRegistroError, setRegistroRespuesta } from "./registroSlice";
+import { setRegistroError, setRegistroRespuesta } from "./registerSlice";
 import {
   setLoginErr,
   setLoadingLogin,

@@ -19,13 +19,6 @@ const Header = () => {
     return location.pathname === path ? 'active' : '';
   };
 
-  const handleLogin = () => {
-    navigate('/login');
-  };
-
-  const handleRegister = () => {
-    navigate('/register');
-  };
 
   const handleLogout = () => {
     dispatch(logOut());
@@ -95,8 +88,10 @@ const Header = () => {
                       </>
                     ) : (
                       <>
-                        <li><button className="dropdown-item" onClick={handleLogin}><i className="far fa-sign-in"></i> Iniciar Sesión</button></li>
-                        <li><button className="dropdown-item" onClick={handleRegister}><i className="far fa-user-plus"></i> Registro</button></li>
+                        <li><Link className="dropdown-item" to="/login"><i className="far fa-sign-in"></i> Iniciar Sesión</Link></li>
+                        <li><Link className="dropdown-item" to="/register"><i className="far fa-user-plus"></i> Registro</Link></li>
+                        <li><Link className="dropdown-item" to="/about"><i className="far fa-info-circle"></i> Acerca de</Link></li>
+                        <li><Link className="dropdown-item" to="/contact"><i className="far fa-envelope"></i> Contacto</Link></li>
                       </>
                     )}
                   </ul>
@@ -117,45 +112,22 @@ const Header = () => {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link className={`nav-link ${isActive('/')}`} to="/">
-                    Home
+                    Inicio
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${isActive('/cars')}`} to="/cars">
-                    Cars
+                  <Link className={`nav-link ${isActive('/vender')}`} to="/vender">
+                    Vender
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
-                  <ul className="dropdown-menu fade-down">
-                    <li><Link className="dropdown-item" to="/about">About Us</Link></li>
-                    <li><a className="dropdown-item" href="#">Our Team</a></li>
-                    <li><a className="dropdown-item" href="#">Pricing Plan</a></li>
-                    <li><a className="dropdown-item" href="#">Gallery</a></li>
-                    <li><a className="dropdown-item" href="#">Faq</a></li>
-                    <li><a className="dropdown-item" href="#">Testimonials</a></li>
-                    <li className="dropdown-submenu">
-                      <a className="dropdown-item dropdown-toggle" href="#">Account</a>
-                      <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Login</a></li>
-                        <li><a className="dropdown-item" href="#">Register</a></li>
-                        <li><a className="dropdown-item" href="#">Forgot Password</a></li>
-                      </ul>
-                    </li>
-                    <li><a className="dropdown-item" href="#">404 Error</a></li>
-                    <li><a className="dropdown-item" href="#">Coming Soon</a></li>
-                    <li><a className="dropdown-item" href="#">Terms Of Service</a></li>
-                    <li><a className="dropdown-item" href="#">Privacy Policy</a></li>
-                  </ul>
-                </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${isActive('/services')}`} to="/services">
-                    Services
+                  <Link className={`nav-link ${isActive('/about')}`} to="/about">
+                    Nosotros
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className={`nav-link ${isActive('/contact')}`} to="/contact">
-                    Contact
+                    Contacto
                   </Link>
                 </li>
               </ul>
@@ -171,7 +143,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="header-btn mt-2">
-                  <Link to="/cars" className="theme-btn">Explore Cars</Link>
+                  <a href="/#cars" className="theme-btn">Explorar Autos</a>
                 </div>
                 <div className="header-account">
                   <div className="dropdown">
@@ -188,8 +160,10 @@ const Header = () => {
                         </>
                       ) : (
                         <>
-                          <li><button className="dropdown-item" onClick={handleLogin}><i className="far fa-sign-in"></i> Iniciar Sesión</button></li>
-                          <li><button className="dropdown-item" onClick={handleRegister}><i className="far fa-user-plus"></i> Registro</button></li>
+                          <li><Link className="dropdown-item" to="/login"><i className="far fa-sign-in"></i> Iniciar Sesión</Link></li>
+                          <li><Link className="dropdown-item" to="/register"><i className="far fa-user-plus"></i> Registro</Link></li>
+                          <li><Link className="dropdown-item" to="/about"><i className="far fa-info-circle"></i> Acerca de</Link></li>
+                          <li><Link className="dropdown-item" to="/contact"><i className="far fa-envelope"></i> Contacto</Link></li>
                         </>
                       )}
                     </ul>

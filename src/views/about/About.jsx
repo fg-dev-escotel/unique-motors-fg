@@ -1,4 +1,7 @@
 import React from 'react';
+import AboutArea from './components/AboutArea';
+import CounterArea from './components/CounterArea';
+import TeamArea from './components/TeamArea';
 
 const About = () => {
   return (

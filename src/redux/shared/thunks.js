@@ -1,34 +1,35 @@
-import { fetch } from "../../../api/api";
-import { _URL_DEV } from "../../../const/url";
-import { setLoading, setNuevoUsuario, setRespuestaForm } from "./onboardingSlice";
+import { fetch } from "../../api/api";
+import { _URL_DEV } from "../../const/url";
+import { setCars, setGridCars, setLoading } from "./slideshowSlice";
 
-
-export const startCargaFormOnboardingUsuario = (body)=>{
-  return async dispatch =>{
-    dispatch(setLoading(true));
+export const startGetCars = () => {
+  return async (dispatch) => {
     try {
-      const res = await fetch('post', `${_URL_DEV}/`, body);
-      if (res.ok) {
-        dispatch(setNuevoUsuario(res.data));
-      };
+      dispatch(setLoading(true));
+      const response = await fetch('get', `${_URL_DEV}/ImageWeb/SlideShow`);
+      if (response.ok) {
+        dispatch(setCars(response.data));
+      }
     } catch (error) {
-      console.log(error);
-    };
-    dispatch(setLoading(false));
+      console.error("No se cargaron las imagenes del carrucel:", error);
+    } finally {
+      dispatch(setLoading(false));
+    }
   };
 };
 
-export const startCargaFormOnboardingFotos =(body)=>{
-  return async dispatch =>{
-    dispatch(setLoading(true));
+export const startGetGridCars = () => {
+  return async (dispatch) => {
     try {
-      const res = await fetch('post', `${_URL_DEV}/`, body);
-      if (res.ok) {
-        dispatch(setRespuestaForm(res.data));
-      };
+      dispatch(setLoading(true));
+      const response = await fetch('get', `${_URL_DEV}/ImageWeb/CarsGrid`);
+      if (response.ok) {
+        dispatch(setGridCars(response.data));
+      }
     } catch (error) {
-      console.log(error);
+      console.error("No se cargaron las imagenes del grid:", error);
+    } finally {
+      dispatch(setLoading(false));
     }
-    dispatch(setLoading(false));
   };
 };

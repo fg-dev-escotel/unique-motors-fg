@@ -5,11 +5,8 @@ import { consLogged } from "../const/consLogged";
 import { Layout } from "../layout/Layout";
 import Home from "../views/home/Home";
 import About from "../views/about/About";
-import Subastas from "../views/auction/pages/Subastas";
 import Contact from "../views/contact/Contact";
-import Services from "../views/services/Services";
-import Detalle from "../views/auction/pages/Detalle";
-import Vender from "../views/sell/Vender";
+import Sell from "../views/sell/Sell";
 import Login from "../views/auth/Login";
 import Register from "../views/auth/Register";
 import { startRefreshToken } from "../redux/features/auth/thunks";
@@ -56,12 +53,8 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/cars" element={<Subastas />} />
-        <Route path="/subastas" element={<Subastas />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/detalles/:id" element={<Detalle />} />
-        <Route path="/vender" element={<Vender />} />
+        <Route path="/vender" element={<Sell />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

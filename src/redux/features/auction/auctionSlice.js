@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const subastaSlice = createSlice({
-    name: 'subasta',
+export const auctionSlice = createSlice({
+    name: 'auction',
     initialState: {
       subastaTorres:{},
       subastaTorre:{},
@@ -47,4 +47,4 @@ export const subastaSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { setSubastaTorres, setSubastaTorre, setPujaMartillo, setPujaMayor, setTorreComentarios, setFechaFin, setImagenPrincipal, setLoading } = subastaSlice.actions;
+export const { setSubastaTorres, setSubastaTorre, setPujaMartillo, setPujaMayor, setTorreComentarios, setFechaFin, setImagenPrincipal, setLoading } = auctionSlice.actions;

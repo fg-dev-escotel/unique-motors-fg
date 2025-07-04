@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export async function fetch(method, url, body) {
+
   const token = localStorage.getItem("token");
   
   try {
@@ -23,7 +24,7 @@ export async function fetch(method, url, body) {
     return { ok: true, data };
   } catch (e) {
     console.log(e);
-    return { ok: false, response: e.response };
+    return { ok: false, response:e.response };
   }
 }
 
@@ -87,8 +88,7 @@ export async function getFile(url, name) {
     responseType: "blob", // Important
   })
     .then((response) => {
-      // fileDownload function would need to be imported or implemented
-      // fileDownload(response.data, name);
+      fileDownload(response.data, name);
       return (salida = { ok: true });
     })
     .catch((e) => {

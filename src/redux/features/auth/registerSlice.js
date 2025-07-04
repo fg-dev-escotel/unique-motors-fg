@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const registroSlice = createSlice({
-  name: "registro",
+export const registerSlice = createSlice({
+  name: "register",
   initialState: {
     registroRespuesta:null,
     registroError:null
@@ -24,4 +24,4 @@ export const {
   setRegistroRespuesta,
   setRegistroNull,
   setRegistroError
-} = registroSlice.actions;
+} = registerSlice.actions;

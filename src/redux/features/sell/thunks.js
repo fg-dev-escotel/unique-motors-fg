@@ -1,6 +1,6 @@
 import { fetch } from "../../../api/api";
 import { _URL_DEV } from "../../../const/url";
-import { setLoading, setRespuesta } from "./venderSlide";
+import { setLoading, setRespuesta } from "./sellSlice";
 
 
 export const startGetNuevoVendedor =(body)=>{

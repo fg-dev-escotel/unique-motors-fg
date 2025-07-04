@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const vendedorSlice = createSlice({
-    name: 'vendedor',
+export const sellSlice = createSlice({
+    name: 'sell',
     initialState: {
       loading:false,
       respuesta:{
@@ -26,4 +26,4 @@ export const vendedorSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { setLoading, setRespuesta, setFormulario } = vendedorSlice.actions;
+export const { setLoading, setRespuesta, setFormulario } = sellSlice.actions;
